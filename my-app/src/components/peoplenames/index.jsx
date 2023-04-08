@@ -14,11 +14,11 @@ const Names=()=> {
     <div>
       <input value={inputViewValue} onChange={(e) => setInputViewValue(e.target.value)} />
       <button onClick={handleChange}>Add</button>
-      <ol>
+      <ul>
         {inputValue.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index}> {index+1} {item}</li>
         ))}
-      </ol>
+      </ul>
     </div>
   );
 }
