@@ -1,26 +1,12 @@
 import React, { useState} from "react";
 import './style.scss'
 
-const Box = ({title, description}) => {  // {title, description} = props
+const Box = ({title, description}) => { 
   const [isDarkMode, setIsDarkMode] = useState(false)
-  const [inputValue, setInputValue] = useState('')
-  const [inputViewValue, setInputViewValue] = useState('')
-
   const toggleDarkMode = () => {
     console.log(isDarkMode)
     setIsDarkMode(!isDarkMode)
   }
-
-  const handleChange = (e) => {
-    setInputValue(e.target.value)
-
-  }
-
-  const showText = () => {
-    setInputViewValue(inputValue)
-  }
-
-
 
   return <div className={`P-box ${isDarkMode ?
     'P-dark-mode' : ''}`}>
